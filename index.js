@@ -1,9 +1,12 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
 const express = require('express')
 const app = express()
-const port = 5000 // server port: localhost:5000
+const port = process.env.PORT // localhost:port
 
 const mongoose = require('mongoose')// mogoose: nodejs와 mongoDB 연결하는 ODM
-mongoose.connect('mongodb+srv://jaja:1234@boilerplate.cavw08x.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGO_URL)
 .then(() => console.log('MongoDB Connected...'))
 .catch(err => console.log(err))
 
