@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({// schema == table 선언
   name: {
     type: String,
     maxlength: 50
