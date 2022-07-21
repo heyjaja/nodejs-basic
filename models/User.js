@@ -33,4 +33,4 @@ const userSchema = mongoose.Schema({// schema == table 선언
 
 const User = mongoose.model('User', userSchema)
 
-module.expoert = {User}
+module.exports = { User }
